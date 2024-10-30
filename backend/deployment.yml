@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-backend
+spec:
+  replicas: 2 # One pod will be killed when there is no load by HPA
+  selector:
+    matchLabels:
+      app: app-backend
+  strategy:
+    type: Recreate # All existing Pods are killed before new ones are created
+  template:
+    metadata:
+      labels:
+        app: app-backend
+        role: backend
+    spec:
+      containers:
+        - name: app-backend
+          image: 108782093326.dkr.ecr.us-east-1.amazonaws.com/group1/backend:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 3000
+          envFrom:
+            - configMapRef:
+                name: app-backend-config
+          resources:
+            limits:
+              memory: "400Mi"
+              cpu: 0.5
+            requests:
+              memory: "300Mi"
+              cpu: 0.25 # gives 1/2 of the limit

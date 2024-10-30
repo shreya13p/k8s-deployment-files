@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-frontend-config
+  labels:
+    app: app-frontend
+data:
+  BACKEND_HOST: http://localhost
+  frontend_CORS_ORIGINS: '["http://localhost"]'
+  PROJECT_NAME: app
