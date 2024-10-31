@@ -9,5 +9,16 @@ spec:
     name: app-frontend
   minReplicas: 1
   maxReplicas: 3
-  targetCPUUtilizationPercentage: 60
-  targetMemoryUtilizationPercentage: 40
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 60
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 40
