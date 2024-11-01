@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: app-backend
 spec:
-  replicas: 2 # One pod will be killed when there is no load by HPA
+  replicas: 1 # One pod will be killed when there is no load by HPA
   selector:
     matchLabels:
       app: app-backend
@@ -26,8 +26,8 @@ spec:
                 name: app-backend-config
           resources:
             limits:
-              memory: "400Mi"
-              cpu: 0.5
+              memory: "200Mi"
+              cpu: 0.25
             requests:
-              memory: "300Mi"
-              cpu: 0.25 # gives 1/2 of the limit
+              memory: "100Mi"
+              cpu: 0.18 # gives 1/2 of the limit

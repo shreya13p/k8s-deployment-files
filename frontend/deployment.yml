@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: app-frontend
 spec:
-  replicas: 2 # One pod will be killed when there is no load by HPA
+  replicas: 1
   selector:
     matchLabels:
       app: app-frontend

@@ -11,5 +11,3 @@ data:
   MONGODB_PASS: "password123"
   MONGODB_HOST: "mongo-svc"
   MONGODB_PORT: "27017"
-  MONGODB_DB: "appointments"
-  

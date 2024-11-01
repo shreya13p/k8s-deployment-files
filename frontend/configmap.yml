@@ -5,7 +5,5 @@ metadata:
   labels:
     app: app-frontend
 data:
-  BACKEND_HOST: http://localhost
-  frontend_CORS_ORIGINS: '["http://localhost"]'
-  PROJECT_NAME: app
-  REACT_APP_BASE_APP_URI: 
+  REACT_APP_BASE_APP_URI: ""
+  PORT: "3001"
