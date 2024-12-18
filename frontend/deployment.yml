@@ -37,7 +37,6 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 5
           securityContext:
-            runAsNonRoot: true
             readOnlyRootFilesystem: true
           resources:
             limits:
