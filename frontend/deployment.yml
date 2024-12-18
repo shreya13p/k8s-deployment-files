@@ -8,7 +8,7 @@ spec:
     matchLabels:
       app: app-frontend
   strategy:
-    type: Recreate # All existing Pods are killed before new ones are created
+    type: Recreate # Ensures all pods are killed before new ones are created
   template:
     metadata:
       labels:
@@ -45,4 +45,4 @@ spec:
               cpu: 0.5
             requests:
               memory: "300Mi"
-              cpu: 0.25 # gives 1/2 of the limit
+              cpu: 0.25
