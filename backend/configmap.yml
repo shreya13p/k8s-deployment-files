@@ -7,7 +7,7 @@ metadata:
 data:
   SERVER_NAME: server
   SERVER_HOST: "http://localhost"
-  MONGODB_USER: "root"
-  MONGODB_PASS: "rootpassword"
+  MONGODB_USER: "adminuser"
+  MONGODB_PASS: "password123"
   MONGODB_HOST: "mongo-svc"
   MONGODB_PORT: "27017"
